@@ -1,11 +1,11 @@
 {
-  "name": "file-storage",
+  "name": "browser-fs",
   "version": "0.0.1",
   "description": "",
   "keywords": [],
-  "main": "dist/file-storage.umd.js",
-  "module": "dist/file-storage.es5.js",
-  "typings": "dist/types/file-storage.d.ts",
+  "main": "dist/browser-fs.umd.js",
+  "module": "dist/browser-fs.es5.js",
+  "typings": "dist/types/browser-fs.d.ts",
   "files": [
     "dist"
   ],

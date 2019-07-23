@@ -1,4 +1,4 @@
-import DummyClass from "../src/file-storage"
+import DummyClass from "../src/browser-fs"
 
 /**
  * Dummy test
