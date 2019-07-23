@@ -1,6 +1,6 @@
 {
-  "name": "browser-fs",
-  "version": "0.0.1",
+  "name": "@davidbernal/browser-fs",
+  "version": "0.0.2",
   "description": "",
   "keywords": [],
   "main": "dist/browser-fs.umd.js",
