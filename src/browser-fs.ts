@@ -91,8 +91,8 @@ export default class Workspace {
   }
 
   private async getFS(): Promise<any> {
-    const availableBytes = await this.requestQuota()
     const canPersist = await navigator.storage.persist()
+    const availableBytes = await this.requestQuota()
     if (!canPersist) throw new Error('Not possible to persist storage')
     const fs = await this.requestFS(availableBytes)
     return fs
@@ -166,7 +166,7 @@ export default class Workspace {
         await content.write(blob)
 
         if (!folderName) return resolve(true)
-        const folder = await this.getFolder(folderName)
+        const folder = await this.createFolder(folderName)
         file.moveTo(folder)
         return resolve(true)
       })
