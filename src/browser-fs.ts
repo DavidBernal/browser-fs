@@ -140,7 +140,6 @@ export default class Workspace {
   }
 
   public async getFile(filePath: string): Promise<any> {
-    const fs = await this.fs
     const fileEntry: any = await this.getFileEntry(filePath)
 
     return new Promise((resolve, reject) =>
