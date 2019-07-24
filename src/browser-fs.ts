@@ -127,7 +127,7 @@ export default class Workspace {
     )
   }
 
-  public async getFile(filePath: string): Promise<any> {
+  public async getFileEntry(filePath: string): Promise<any> {
     const fs = await this.fs
     return new Promise((resolve, reject) => {
       fs.root.getFile(
@@ -137,6 +137,15 @@ export default class Workspace {
         (err: any) => reject(err)
       )
     })
+  }
+
+  public async getFile(filePath: string): Promise<any> {
+    const fs = await this.fs
+    const fileEntry: any = this.getFileEntry(filePath)
+
+    return new Promise((resolve, reject) =>
+      fileEntry.file((file: Blob) => resolve(file), (err: any) => reject(err))
+    )
   }
 
   public async createFile(filePath: string): Promise<any> {
